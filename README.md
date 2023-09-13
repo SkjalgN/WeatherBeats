@@ -10,8 +10,7 @@
   <h3 align="center">WeatherBeats</h3>
 
   <p align="center">
-    Cloud Computing Project 1: Done at QUT Au
-    stralia in Autumn 2023
+    Cloud Computing Project 1: Done at QUT Australia in Autumn 2023
   </p>
 </div>
 
