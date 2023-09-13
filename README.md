@@ -36,7 +36,8 @@ Here's some key features:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Since the program is dockerized, its easy to deploy. clone the repository and use the "docker compose up" to start the server. Localhost:8000 will host the server. 
+Since the program is dockerised, its easy to deploy. 
+Clone the repository and use the "docker compose up" to start the server. Localhost:8000 will host the server. 
 
 ### Built With
 
