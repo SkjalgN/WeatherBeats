@@ -1,0 +1,54 @@
+<div class="maindiv">
+    <div class="maincontent">
+        <div class="main1">
+            <p class="logo">WeatherBeats</p>
+        </div>
+        <div class="main2">
+            <input type="text" id="cityput" placeholder="Find your city...">
+            <button id="citybtn">Search</button>
+        </div>
+        <div class="main3">
+            <div class="left">
+                <p class="t1">Your playlist recomendations is based on</p>
+                <p class="t2">Month</p>
+                <p class="t3">{{month}}</p>
+                <p class="t2">Weather</p>
+                <p class="t3">{{weather.temperature}}°</p>
+                <p class="t3">{{weather.description}}</p>
+            </div>
+            <div class="right">
+                <img class="weathericon" src="{{weatherpic}}" alt=" Thumbnail">
+            </div>
+        </div>
+        <div class="main4">
+            <p class="t4">Playlist for {{weather.description}}</p>
+        </div>
+        <div class="main5">
+            {{#each videos}}
+            <div class="video">
+                <img class="playlists" src="{{thumbnail}}" alt="{{title}} Thumbnail">
+            </div>
+            {{/each}}
+            {{!-- <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
+            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
+            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
+            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
+            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail"> --}}
+        </div>
+    </div>
+    <div class="rightcontent">
+        <div class="topright">
+            <p class="cityname">{{city}}</p>
+        </div>
+        <div class="bottomright">
+            <img class="picture" src="images/Sunny.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Cloudy.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Rainy.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Snowy.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Thunder.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Christmas.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Love.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Spooky.svg" alt="rain Thumbnail">
+        </div>
+    </div>
+</div>
