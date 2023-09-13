@@ -1,5 +1,3 @@
-# W
-
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
@@ -29,8 +27,10 @@ Here's some key features:
 * Dockerised
 * Amazon EC3 cloud sevices
 
+
+
   <a>
-    <img src="public/images/Spooky.svg" alt="frontpage">
+    <img src="public/images/Snowy" alt="frontpage">
   </a>
 
 <!-- GETTING STARTED -->
