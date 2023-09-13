@@ -30,7 +30,7 @@ Here's some key features:
 
 
   <a>
-    <img src="public/images/Snowy" alt="frontpage">
+    <img src="public/images/Snowy.svg" alt="frontpage">
   </a>
 
 <!-- GETTING STARTED -->
