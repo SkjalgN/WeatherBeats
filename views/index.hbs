@@ -26,14 +26,9 @@
         <div class="main5">
             {{#each videos}}
             <div class="video">
-                <img class="playlists" src="{{thumbnail}}" alt="{{title}} Thumbnail">
+                <img class="playlists" src="{{thumbnail}}" alt="{{title}} Thumbnail" onclick="gotovideo('{{link}}')">
             </div>
             {{/each}}
-            {{!-- <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
-            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
-            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
-            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail">
-            <img class="playlists" src="images/simon.PNG" alt=" Thumbnail"> --}}
         </div>
     </div>
     <div class="rightcontent">
@@ -41,14 +36,14 @@
             <p class="cityname">{{city}}</p>
         </div>
         <div class="bottomright">
-            <img class="picture" src="images/Sunny.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Cloudy.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Rainy.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Snowy.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Thunder.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Christmas.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Love.svg" alt="rain Thumbnail">
-            <img class="picture" src="images/Spooky.svg" alt="rain Thumbnail">
+            <img class="picture" src="images/Sunny.svg" alt="rain Thumbnail" onclick="override('clear')">
+            <img class="picture" src="images/Cloudy.svg" alt="rain Thumbnail" onclick="override('cloud')">
+            <img class="picture" src="images/Rainy.svg" alt="rain Thumbnail" onclick="override('rain')">
+            <img class="picture" src="images/Snowy.svg" alt="rain Thumbnail" onclick="override('snow')">
+            <img class="picture" src="images/Thunder.svg" alt="rain Thumbnail" onclick="override('thunder')">
+            <img class="picture" src="images/Christmas.svg" alt="rain Thumbnail" onclick="override('christmas')">
+            <img class="picture" src="images/Love.svg" alt="rain Thumbnail" onclick="override('love')">
+            <img class="picture" src="images/Spooky.svg" alt="rain Thumbnail" onclick="override('spooky')">
         </div>
     </div>
 </div>
