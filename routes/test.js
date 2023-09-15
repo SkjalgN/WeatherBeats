@@ -62,3 +62,7 @@ Promise.all([weatherDataPromise , videodataPromises, currentMonth, city, weather
   console.error('Error:', error);
 });
 });
+
+
+const YoutubeApiKey = 'AIzaSyC9xhWzcvS4pqF14DFMntlDABUDjyGcsjo';
+const openWeatherApiKey = 'a1b18af47376495368ad011abb3ac86e';
