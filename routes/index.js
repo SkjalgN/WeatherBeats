@@ -64,8 +64,6 @@ async function uploadVisitorCountToS3() {
   }
 }
 
-
-
 // Example: Increment visitor count and update in S3
 router.get("/increment", async function (req, res) {
 
@@ -80,8 +78,8 @@ router.get("/", async function (req, res) {
   await uploadVisitorCountToS3(); // Update count in S3
   const count = await getVisitorCountFromS3();
   console.log(count);
-  const YoutubeApiKey = 'AIzaSyC9xhWzcvS4pqF14DFMntlDABUDjyGcsjo';
-  const openWeatherApiKey = 'a1b18af47376495368ad011abb3ac86e';
+  const YoutubeApiKey = process.env.YOUTUBE_API_KEY;
+  const openWeatherApiKey = process.env.OPENWEATHER_API_KEY;
   const override = req.query.override || "";
   const city = req.query.city || 'Brisbane';
 
