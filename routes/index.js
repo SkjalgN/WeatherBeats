@@ -21,9 +21,11 @@ const objectKey = "visitor-count.json";
 let visitorCount = 0;
 
 async function initializeVisitorCount() {
-  const count = await getVisitorCountFromS3();
-  visitorCount = count || 0;
-  console.log("Visitor count initialized:", visitorCount);
+  try {
+    const count = await getVisitorCountFromS3();
+    visitorCount = count; 
+  } catch (err) {
+  }
 }
 
 async function getVisitorCountFromS3() {
@@ -31,53 +33,37 @@ async function getVisitorCountFromS3() {
     Bucket: bucketName,
     Key: objectKey,
   };
-
   try {
     const data = await s3.getObject(params).promise();
     const parsedData = JSON.parse(data.Body.toString("utf-8"));
     visitorCount = parsedData.count;
-
-
-    console.log("Visitor count retrieved:", visitorCount);
     return visitorCount;
   } catch (err) {
     console.error("Error:", err);
   }
 }
 
-// Upload the visitor count to S3
 async function uploadVisitorCountToS3() {
+  console.log("here count is: ", visitorCount)
   const params = {
     Bucket: bucketName,
     Key: objectKey,
-    Body: JSON.stringify({ count: visitorCount }), // Convert count to JSON
-    ContentType: "application/json", // Set content type
+    Body: JSON.stringify({ count: visitorCount }), 
+    ContentType: "application/json", 
   };
-
   try {
     await s3.putObject(params).promise();
     console.log("Visitor count uploaded successfully.");
   } catch (err) {
-
-
     console.error("Error uploading visitor count:", err);
   }
 }
 
-// Example: Increment visitor count and update in S3
-router.get("/increment", async function (req, res) {
-
-});
-
-module.exports = router;
-
-
 router.get("/", async function (req, res) {
-  initializeVisitorCount();
-  visitorCount++; // Increment visitor count
-  await uploadVisitorCountToS3(); // Update count in S3
+  await initializeVisitorCount();
+  visitorCount++;
+  await uploadVisitorCountToS3(); 
   const count = await getVisitorCountFromS3();
-  console.log(count);
   const YoutubeApiKey = process.env.YOUTUBE_API_KEY;
   const openWeatherApiKey = process.env.OPENWEATHER_API_KEY;
   const override = req.query.override || "";
