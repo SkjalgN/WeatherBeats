@@ -22,15 +22,16 @@ First Cloud project
 
 Here's some key features:
 * Quick html and css features
-* JS client side
+* JS
 * Node server
-* Dockerised
-* Amazon EC3 cloud sevices
+* Dockerized
+* Amazon S3 cloud sevices (Buckets-Json)
+
 
 
 
   <a>
-    <img src="public/images/Snowy.svg" alt="frontpage">
+    <img src="WB.png" alt="frontpage">
   </a>
 
 <!-- GETTING STARTED -->
