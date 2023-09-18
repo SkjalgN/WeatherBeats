@@ -31,7 +31,7 @@ Here's some key features:
 
 
   <a>
-    <img src="WB.png" alt="frontpage">
+    <img src="public/images/WB.png" alt="frontpage">
   </a>
 
 <!-- GETTING STARTED -->
